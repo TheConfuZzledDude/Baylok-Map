@@ -41,7 +41,7 @@ const App = () => {
 
     return (
         <div>
-            <h1>Baylok D</h1>
+            <h1>Baylok</h1>
             <div id="map" ref={measuredRef} style={{ height: "80vh" }}></div>
         </div>
     );
