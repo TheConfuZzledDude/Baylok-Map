@@ -10,7 +10,6 @@ const App = () => {
 
     useEffect(() => {
         if (mapEl !== null) {
-            console.log(mapEl);
             const map = Leaflet.map("map", {
                 crs: Leaflet.CRS.Simple,
             });
@@ -24,6 +23,9 @@ const App = () => {
                 bounds: rc.getMaxBounds(),
                 maxNativeZoom: rc.zoomLevel(),
             }).addTo(map);
+
+            map.setMaxBounds(rc.getMaxBounds().pad(0.25));
+
             return () => {
                 map.remove()
             }
